@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* PAGE SECTIONS */
+body {
+  color: #444;
+  font-family: sans-serif;
+  position: relative;
+  border-top: 10px solid #1098ad;
+}
+
+.container {
+  width: 1200px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+}
+
+/* NAPOMENA JEDNA
+padding se koristi kada hoces da izdvojis se od bordera i tih strana sa leve desne
+a margin se koristi unutar kada hoces da odvojis tekst head images i tako dalje */
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  /* Kada ukucas samo padding on je za gore dole,da bi se to sve olaksalo
+  kucas ovo ispod,sto mu u prevodu dodje znacenje prvo je gore dole a drugo levo desno
+   */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  /* height: 80px; */
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background: color #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* padding-top:50px;
+  padding-bottom: 50px; */
+  padding: 50px 0;
+  width: 1200px;
+}
+
+/* SMALLER ELEMENTS  */
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+h1 {
+  font-size: 26px;
+
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  color: #1098ad;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+p {
+  font-size: 22px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  /* display: inline; */
+  /* NAPOMENA display:inline je kada je sve u jednom redu */
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+article header p {
+  font-style: italic;
+}
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* li:nth-child(even) {
+color:red; 
+} */
+
+/* Misconeption: this wont work */
+article p:first-child {
+  color: red;
+}
+
+/* Styling links */
+/* NAPOMENA OVAKO ISPOD TREBA DA BUDE ALI NECE */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+/* NAPOMENA:OVAKO NE TREBA DA BUDE A RADI */
+a {
+  color: #1098ad;
+}
+
+/* Ovo je uveke iste boje ko i link  */
+a:visited {
+  color: #1098ad;
+}
+
+/* hover je sve sto misem KRENEMO da kliknemo */
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+/* active je kada KLIKNEMO NA LINK PA STA ISPADNE */
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+}
+
+/* NAPOMENA kada zelis da napravis blokove da ide jedan ispod drugog 
+onda stavljas tag display:block  */
+
+nav a:link {
+  /* background: orangered;
+  margin: 20px;
+  padding: 20px;
+  display: block; */
+
+  margin-right: 30px;
+
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* Kada zelimo samo jedan element u ovom slucaju samo jedno slovo ili 
+sticker onda koristimo ovako dole */
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+/* I uvek ide ovim redosledom
+Link visited hover active */
+
+/* Pravilo koje vazi i kojim redosledom funkcionise
+da,uvek kada stavljamo neke klase prvi koji ce raditi je onaj 
+pod idemon id pa onda ako nema id onda ce raditi class ako nema class
+onda ce footer element  */
+/* 
+#copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;
+} */
+/* i jedan hak ako bas ne mozemo da skontamo
+mozemo staviti !important i taj ce uvek prvi biti
+ovo vazi za sve */
+
+/* FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
+}
